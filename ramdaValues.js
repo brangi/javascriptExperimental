@@ -1,6 +1,5 @@
 const R = require('ramda');
 
-
 //Ramda ex 1
 var valuesOrig = {x : 1, y : 2, z : 3};
 var changeValues = R.cond([
@@ -13,8 +12,6 @@ var changeValues = R.cond([
 var findValuesAndChange = (num, key, obj) => changeValues(key, num);
 var values = R.mapObjIndexed(findValuesAndChange, valuesOrig);
 console.log(values);
-
-
 
 //Ramda ex 2
 var changeValuesFunc1 = function(obj) {
@@ -37,8 +34,6 @@ changeValuesOfObject =  R.cond([
             [ function(obj) { return Object.keys(obj)[1]  === 'b' ; }, function (){ return changeValuesFunc2(arguments[0]); }]
         ]);
 
-
 var changeEachObject = x => changeValuesOfObject(x);
 var changedObjectsArrValues  = R.map(changeEachObject, valuesArrOrig);
 console.log(changedObjectsArrValues);
-
