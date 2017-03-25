@@ -1,5 +1,3 @@
-
-
 var values = {x : 1, y : 2, z : 3};
 for (var key of Object.keys(values)) {
     if (key  == 'x') {
@@ -21,6 +19,3 @@ valuesArray.map(function(keyitem) {
  }
 });
 console.log(valuesArray);
-
-
-
